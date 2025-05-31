@@ -1,0 +1,249 @@
+<script>
+    const opcao1 = 'Solteiro';
+    const opcao2 = 'Casado';
+    const opcao3 = 'Divorciado';
+    const opcao4 = 'Viúvo';
+    const opcao5 = 'União Estável';
+    
+    const opcao6 = 'Masculino';
+    const opcao7 = 'Feminino';
+
+    const opcao8 = 'Azul';
+    const opcao9 = 'Verde';
+    const opcao10 = 'Rosa';
+    const opcao11 = 'Vermelho';
+    const opcao12 = 'Amarelo';
+    const opcao13 = 'Laranja';
+    const opcao14 = 'Branco';
+    const opcao15 = 'Roxo';
+    const opcao16 = 'Preto';
+
+    const opcao17 = 'Sim';
+    const opcao18 = 'Não';
+
+    var totalRespondentes = 0;
+    var totalRespondentesMasculino = 0;
+    var totalRespondentesFeminino = 0;
+
+    var totalSolteiros = 0;
+    var totalCasados = 0;
+    var totalDivorciados = 0;
+    var totalViuvo = 0;
+    var totalUniaoEstavel = 0;    
+
+    var maisVelhoSolteiro = 0;
+    var maisVelhoCasado = 0;
+    var maisVelhoDivorciado = 0;
+    var maisVelhoViuvo = 0;
+    var maisVelhoUniaoEstavel = 0;
+
+    var maisNovoSolteiro = 0;
+    var maisNovoCasado = 0;
+    var maisNovoDivorciado = 0;
+    var maisNovoViuvo = 0;
+    var maisNovoUniaoEstavel = 0;
+
+    var totalSolteirosMasculino = 0;
+    var totalCasadosMasculino = 0;
+    var totalDivorciadosMasculino = 0;
+    var totalViuvosMasculino = 0;
+    var totalUniaoEstavelMasculino = 0;
+
+    var totalSolteirosFeminino = 0;
+    var totalCasadosFeminino = 0;
+    var totalDivorciadosFeminino = 0;
+    var totalViuvosFeminino = 0;
+    var totalUniaoEstavelFeminino = 0;
+
+    var totalCorAzul = 0;
+    var totalCorVerde = 0;
+    var totalCorRosa = 0;
+    var totalCorVermelho = 0;
+    var totalCorAmarelo = 0;
+    var totalCorLaranja = 0;
+    var totalCorRoxo = 0;
+    var totalCorBranco = 0;
+    var totalCorPreto = 0;
+
+    
+    
+do {
+    var opcao = prompt('Digite seu estado civil: ('
+        + opcao1 + ', '
+        + opcao2 + ', '
+        + opcao3 + ', '
+        + opcao4 + ', '
+        + opcao5 + ') ');
+    var idade = prompt('Digite sua idade:');
+    var sexo = prompt('Digite seu sexo: ' + opcao6 + ', ' + opcao7);
+    totalRespondentes ++;
+    var cor = prompt("Qual sua cor preferida: " + opcao8 + ', ' + opcao9 + ', ' + opcao10 + ', ' + opcao11 + ', ' + opcao12 + ', ' + opcao13 + ', ' + opcao14 + ', ' + opcao15 + ' ou ' + opcao16);
+        if (cor == opcao8) {
+            totalCorAzul ++;
+        } else if (cor == opcao9) {
+            totalCorVerde ++;
+        } else if (cor == opcao10) {
+            totalCorRosa ++;
+        } else if (cor == opcao11) {
+            totalCorVermelho ++;
+        } else if (cor == opcao12) {
+            totalCorAmarelo ++;          
+        } else if (cor == opcao13) {
+            totalCorLaranja ++;            
+        } else if (cor == opcao14) {
+            totalCorBranco ++;
+        } else if (cor == opcao15) {
+            totalCorRoxo ++;
+        } else if (cor == opcao16) {
+            totalCorPreto ++;
+        
+    } else if (opcao == opcao1) {
+        totalSolteiros ++;
+        if (idade > maisVelhoSolteiro) {
+            maisVelhoSolteiro = idade;
+        }if ((idade < maisNovoSolteiro) || (maisNovoSolteiro == 0)) {
+                maisNovoSolteiro = idade;
+        } if (sexo == opcao6) {
+            totalSolteirosMasculino ++;
+        } else if (sexo == opcao7) {
+            totalSolteirosFeminino ++;
+        }
+    }if (opcao == opcao2) {
+        totalCasados ++;
+        if (idade > maisVelhoCasado) {
+            maisVelhoCasado = idade;
+        }if ((idade < maisNovoCasado) || (maisNovoCasado == 0)) {
+            maisNovoCasado = idade;
+        }if (sexo == opcao6) {
+            totalCasadosMasculino ++;
+        } else if (sexo == opcao7) {
+            totalCasadosFeminino ++;
+        }
+    }if (opcao == opcao3) {
+        totalDivorciados ++;
+        if (idade > maisVelhoDivorciado) {
+            maisVelhoDivorciado = idade;
+        }if ((idade < maisNovoDivorciado) || (maisNovoDivorciado == 0)) {
+            maisNovoDivorciado = idade;
+        }if (sexo == opcao6) {
+            totalDivorciadosMasculino ++;
+        } else if (sexo == opcao7) {
+            totalDivorciadosFeminino ++;
+        }
+    }if (opcao == opcao4) {
+        totalViuvo ++;
+        if (idade > maisVelhoViuvo) {
+            maisVelhoViuvo = idade;
+        }if ((idade < maisNovoViuvo) || (maisNovoViuvo == 0)) {
+            maisNovoViuvo = idade;
+        }if (sexo == opcao6) {
+            totalViuvosMasculino ++;
+        } else if (sexo == opcao7) {
+            totalViuvosFeminino ++;
+        }
+    } if (opcao == opcao5) {
+        totalUniaoEstavel ++;
+        if (idade > maisVelhoUniaoEstavel) {
+            maisVelhoUniaoEstavel = idade;
+        }
+        if ((idade < maisNovoUniaoEstavel) || (maisNovoUniaoEstavel == 0)) {
+            maisNovoUniaoEstavel = idade;
+        }
+        if (sexo == opcao6) {
+            totalUniaoEstavelMasculino ++;
+        } else if (sexo == opcao7) {
+            totalUniaoEstavelFeminino ++;
+        }
+    } if (totalRespondentesMasculino == totalRespondentes - totalRespondentesFeminino) {
+        totalRespondentesMasculino ++;
+    } else if (totalRespondentesFeminino == totalRespondentes - totalRespondentesMasculino) {
+        totalRespondentesFeminino ++;
+    }
+
+    var continuar = prompt('Deseja continuar?: ' + opcao17 + ' ou ' + opcao18)
+} 
+    while (continuar == opcao17);  
+    
+
+    document.write('Total de respondentes: ' + totalRespondentes);
+    document.write('<br>');
+    document.write('Total de respondentes masculino: ' + totalRespondentesMasculino);
+    document.write('<br>');
+    document.write('Total de respondentes feminino: ' + totalRespondentesFeminino);
+    document.write('<br>');
+    
+    document.write('% de Solteiros: ' + ((totalSolteiros / totalRespondentes) * 100));  
+    document.write('<br>');
+    document.write('% de Casados: ' + ((totalCasados / totalRespondentes) * 100));
+    document.write('<br>');
+    document.write('% de Divorciados: ' + ((totalDivorciados / totalRespondentes) * 100));
+    document.write('<br>');
+    document.write('% de Viuvos: ' + ((totalViuvo / totalRespondentes) * 100));
+    document.write('<br>');
+    document.write('% de União Estável: ' + ((totalUniaoEstavel / totalRespondentes) * 100));
+    document.write('<br>');
+        
+    document.write('Idade do solteiro mais novo:' + maisNovoSolteiro);
+    document.write('<br>');
+    document.write('Idade do casado mais novo:' + maisNovoCasado);
+    document.write('<br>');    
+    document.write('Idade do divorciado mais novo:' + maisNovoDivorciado);
+    document.write('<br>');
+    document.write('Idade do que tem União Estável mais novo: ' + maisNovoUniaoEstavel);
+    document.write('<br>');
+    document.write('Idade do viuvo mais novo:' + maisNovoViuvo);    
+    document.write('<br>');
+
+    document.write('Idade de quem é o solteiro mais velho: ' + maisVelhoSolteiro);
+    document.write('<br>');
+    document.write('Idade de quem é casado e mais velho: ' + maisVelhoCasado);
+    document.write('<br>');
+    document.write('Idade de quem é o divorciado mais velho: ' + maisVelhoDivorciado);
+    document.write('<br>');
+    document.write('Idade de que tem União Estável mais velho: ' + maisVelhoUniaoEstavel);
+    document.write('<br>');
+    document.write('Idade de quem é o viúvo mais velho: ' + maisVelhoViuvo);
+    document.write('<br>');
+
+    document.write('O total de pessoas do sexo masculino que são solteiros é: ' + totalSolteirosMasculino);
+    document.write('<br>');
+    document.write('O total de pessoas do sexo masculino que são casados é: ' + totalCasadosMasculino);
+    document.write('<br>');
+    document.write('O total de pessoas do sexo masculino que são divorciados é: ' + totalDivorciadosMasculino);
+    document.write('<br>');
+    document.write('O total de pessoas do sexo mascunino que possuem união estável é ' + totalUniaoEstavelMasculino);
+    document.write('<br>');
+    document.write('O total de pessoas do sexo masculino que são viúvos é: ' + totalViuvosMasculino);
+    document.write('<br>');
+
+    document.write('O total de pessoas do sexo feminino que são solteiras é: ' + totalSolteirosFeminino);
+    document.write('<br>');
+    document.write('O total de pessoas do sexo feminino que são casados é: ' + totalCasadosFeminino);
+    document.write('<br>');
+    document.write('O total de pessoas do sexo feminino que são divorciados é: ' + totalDivorciadosFeminino);
+    document.write('<br>');
+    document.write('O total de pessoas do sexo feminino que possuem união estável é ' + totalUniaoEstavelFeminino);
+    document.write('<br>');
+    document.write('O total de pessoas do sexo feminino que são viúvas é: ' + totalViuvosFeminino);
+    document.write('<br>');
+
+
+    document.write('O total de pessoas que escolheram a cor Azul foi de: ' + totalCorAzul);
+    document.write('<br>');
+    document.write('O total de pessoas que escolheram a cor Verde foi de: ' + totalCorVerde);   
+    document.write('<br>');
+    document.write('O total de pessoas que escolheram a cor Rosa foi de: ' + totalCorRosa);
+    document.write('<br>');
+    document.write('O total de pessoas que escolheram a cor Vermelha foi de: ' + totalCorVermelho);
+    document.write('<br>');
+    document.write('O total de pessoas que escolheram a cor Amarelo foi de: ' + totalCorAmarelo);
+    document.write('<br>');
+    document.write('O total de pessoas que escolheram a cor Laranja foi de: ' + totalCorLaranja);
+    document.write('<br>');
+    document.write('O total de pessoas que escolheram a cor Roxo foi de: ' + totalCorRoxo);
+    document.write('<br>');
+    document.write('O total de pessoas que escolheram a cor Branco foi de: ' + totalCorBranco);
+    document.write('<br>');
+    document.write('O total de pessoas que escolheram a cor Preto foi de: ' + totalCorPreto);
+    document.write('<br>');
+</script>

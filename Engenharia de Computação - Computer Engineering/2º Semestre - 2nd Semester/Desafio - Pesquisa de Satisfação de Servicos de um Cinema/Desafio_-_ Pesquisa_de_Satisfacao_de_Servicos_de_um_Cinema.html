@@ -1,0 +1,56 @@
+<script>
+
+var responde = prompt ("Deseja responder a pesquisa de satisfação sobre os serviços prestados pelo Cinema? (S - Sim | N - Não) ");
+var qntRespostas = 0;
+var qntOtimo = 0;
+var qntBom = 0;
+var qntRegular = 0;
+var qntPessimo = 0;
+var idadeMaisNovo = 0;
+var idadeMaisVelho = 0;
+var avaliacaoMaisNovo = 0;
+var avaliacaoMaisVelho = 0;
+
+while (responde == "S") { 
+    qntRespostas ++;
+    var avaliacao = prompt ("Qual a sua avaliação em relação aos serviços prestados pelo Cinema? (O - Ótimo | B - Bom | R - Regular | P - Péssimo) ");
+    if (avaliacao == "O") {
+        qntOtimo ++;
+    } else  if (avaliacao == "B") {
+        qntBom ++;
+    } else if (avaliacao == "R") {
+        qntRegular ++;
+    } else if (avaliacao == "P") {
+        qntPessimo ++;
+    }
+    var idade = prompt ("Qual a sua idade? ");
+    if (idade > idadeMaisVelho) {
+        idadeMaisVelho = idade;
+        avaliacaoMaisVelho = avaliacao;
+    };
+    
+    if ((idade < idadeMaisNovo) || (idadeMaisNovo == 0)) {
+        idadeMaisNovo = idade;
+        avaliacaoMaisNovo = avaliacao;        
+    };
+
+    responde = prompt ("Deseja responder a avaliação em relação aos serviços prestados pelo Cinema? (S - Sim | N - Não)");   
+}
+    
+
+document.write ("O total de pessoas que responderam a pesquisa, foi de: " + qntRespostas);
+document.write ("<br>");
+document.write ("O total de pessoas que avaliaram o serviço como ótimo, foi de: " + qntOtimo);
+document.write ("<br>");
+document.write ("O total de pessoas que avaliaram o serviço como bom, foi de: " + qntBom);
+document.write ("<br>");
+document.write ("O total de <pessoas que avaliaram o serviço como regular, foi de: " + qntRegular);
+document.write ("<br>");
+document.write ("O total de pessoas que avaliaram o serviço como péssimo, foi de: " + qntPessimo);
+document.write ("<br>");
+document.write ("A idade da pessoa mais velha que respondeu a pesquisa de satisfação, é de: " + idadeMaisVelho + "anos. E sua avaliação foi: " + avaliacaoMaisVelho);
+document.write ("<br>");
+document.write ("A idade da pessoa mais nova que respondeu a pesquisa de satisfação, é de: " + idadeMaisNovo + "anos. E sua avaliação foi: " + avaliacaoMaisNovo);
+document.write ("<br>");
+
+</script>
