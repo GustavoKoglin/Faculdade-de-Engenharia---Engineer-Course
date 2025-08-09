@@ -13,10 +13,22 @@ function showToast(message, type = 'info') {
         let title = 'Aviso';
         let textColor = 'text-white';
         let btnClose = 'btn-close-white';
-        if (type === 'success') { bg = 'bg-success'; title = 'Sucesso'; textColor = 'text-white'; btnClose = 'btn-close-white'; }
-        else if (type === 'error') { bg = 'bg-danger'; title = 'Erro'; textColor = 'text-white'; btnClose = 'btn-close-white'; }
-        else if (type === 'warning') { bg = 'bg-warning'; title = 'Atenção'; textColor = 'text-dark'; btnClose = ''; }
-        else if (type === 'info') { bg = 'bg-info'; title = 'Aviso'; textColor = 'text-dark'; btnClose = ''; }
+        if (type === 'success') {
+                bg = 'bg-success';
+                title = 'Sucesso';
+        } else if (type === 'error') {
+                bg = 'bg-danger';
+                title = 'Erro';
+        } else if (type === 'warning') {
+                bg = 'bg-warning';
+                title = 'Atenção';
+                textColor = 'text-dark';
+                btnClose = '';
+        } else if (type === 'info') {
+                bg = 'bg-info';
+                textColor = 'text-dark';
+                btnClose = '';
+        }
 
         const toastHtml = `
         <div id="${toastId}" class="toast align-items-center ${bg} ${textColor} border-0 mb-2" role="alert" aria-live="assertive" aria-atomic="true">
